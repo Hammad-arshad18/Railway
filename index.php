@@ -186,12 +186,5 @@ if ($conn) {
 <!--Footer-->
 <?php include "footer.php"; ?>
 
-<script>
-    // $(document).ready(function () {
-    //     $(window).scroll(function () {
-    //         $(window).scrollTop() > 100 ? $('#up').fadeIn() : $('#up').fadeOut();
-    //     });
-    // });
-</script>
 </body>
 </html>

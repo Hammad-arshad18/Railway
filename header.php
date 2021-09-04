@@ -1,7 +1,3 @@
-<?php
-//session_start();
-//?>
-
 <nav class="navbar navbar-expand-lg navbar-light bg-light shadow-sm sticky-md-top">
     <div class="container">
         <a class="navbar-brand" href="index.php">Railway <span>A Booking Service</span></a>
@@ -23,7 +19,7 @@
                     ?>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Pricing</a>
+                    <a class="nav-link" href="pricing.php">Pricing</a>
                 </li>
                 <?php
                 if((isset($_SESSION['username']) and $_SESSION['login']==true) or (isset($_SESSION['uemail']) and $_SESSION['adminlogin']==true)){
