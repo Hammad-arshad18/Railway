@@ -99,7 +99,7 @@ $conn = mysqli_connect('localhost', 'root', '', 'railway');
                         premier industrial and financial centre.</p>
                 </div>
                 <div class="popular-btn text-center">
-                    <a class="btn btn-outline-success">Pricing</a>
+                    <a class="btn btn-outline-success" href="pricing.php">Pricing</a>
                 </div>
             </div>
             <div class="col-md-3 col-8 shadow">
@@ -112,7 +112,7 @@ $conn = mysqli_connect('localhost', 'root', '', 'railway');
                         wealthiest cities.</p>
                 </div>
                 <div class="popular-btn text-center">
-                    <a class="btn btn-outline-success">Pricing</a>
+                    <a class="btn btn-outline-success" href="pricing.php">Pricing</a>
                 </div>
             </div>
             <div class="col-md-3 col-8 shadow">
@@ -125,7 +125,7 @@ $conn = mysqli_connect('localhost', 'root', '', 'railway');
                         Pakistan.</p>
                 </div>
                 <div class="popular-btn text-center">
-                    <a class="btn btn-outline-success">Pricing</a>
+                    <a class="btn btn-outline-success" href="pricing.php">Pricing</a>
                 </div>
             </div>
         </div>

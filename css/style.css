@@ -316,4 +316,13 @@ html {
   margin: 5px 0;
 }
 
+.pricing {
+  padding: 20px 0;
+}
+.pricing h1 {
+  text-align: center;
+  color: #1dbf73;
+  padding: 10px 0;
+}
+
 /*# sourceMappingURL=style.css.map */
