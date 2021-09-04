@@ -5,12 +5,12 @@ if($conn){
     if($_SERVER['REQUEST_METHOD']=="POST"){
         $uemail=$_POST['uemail'];
         $upassword=$_POST['upassword'];
-        $_SESSION['uemail']=$uemail;
-        $_SESSION['adminlogin']=true;
         $admin_login_query="SELECT * FROM `railway_admin` WHERE email = '$uemail' AND password = '$upassword'";
         $admin_run_login=mysqli_query($conn,$admin_login_query);
         $row_run=mysqli_num_rows($admin_run_login);
         if($row_run==1){
+            $_SESSION['uemail']=$uemail;
+            $_SESSION['adminlogin']=true;
             header('location:admin.php');
         }
     }

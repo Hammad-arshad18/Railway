@@ -5,12 +5,13 @@ if($conn){
         $uemail=$_POST['uemail'];
         $upassword=$_POST['upassword'];
         session_start();
-        $_SESSION['username']=$uemail;
-        $_SESSION['login']=true;
+
 
         $login_query="SELECT * FROM `railway_user` WHERE email = '$uemail' AND password = '$upassword'";
         $run_login_query=mysqli_query($conn,$login_query);
         if (mysqli_num_rows($run_login_query) == 1) {
+            $_SESSION['username']=$uemail;
+            $_SESSION['login']=true;
             while ($login_data=mysqli_fetch_assoc($run_login_query)){
                 $_SESSION['id']=$login_data['id'];
             }
