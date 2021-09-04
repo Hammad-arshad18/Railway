@@ -12,6 +12,10 @@ if($conn){
             $_SESSION['uemail']=$uemail;
             $_SESSION['adminlogin']=true;
             header('location:admin.php');
+        }else {
+            echo '<div class="alert alert-danger alert-dismissible" role="alert" id="liveAlert">Wrong
+  <strong> Username or Password!</strong> Try Again!!<button type = "button" class="btn-close" data-bs-dismiss = "alert" aria-label = "Close" ></button >
+</div > ';
         }
     }
 }

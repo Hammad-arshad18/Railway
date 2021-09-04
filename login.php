@@ -1,21 +1,25 @@
 <?php
-$conn=mysqli_connect('localhost','root','','railway');
-if($conn){
-    if($_SERVER['REQUEST_METHOD']=="POST"){
-        $uemail=$_POST['uemail'];
-        $upassword=$_POST['upassword'];
+$conn = mysqli_connect('localhost', 'root', '', 'railway');
+if ($conn) {
+    if ($_SERVER['REQUEST_METHOD'] == "POST") {
+        $uemail = $_POST['uemail'];
+        $upassword = $_POST['upassword'];
         session_start();
 
 
-        $login_query="SELECT * FROM `railway_user` WHERE email = '$uemail' AND password = '$upassword'";
-        $run_login_query=mysqli_query($conn,$login_query);
+        $login_query = "SELECT * FROM `railway_user` WHERE email = '$uemail' AND password = '$upassword'";
+        $run_login_query = mysqli_query($conn, $login_query);
         if (mysqli_num_rows($run_login_query) == 1) {
-            $_SESSION['username']=$uemail;
-            $_SESSION['login']=true;
-            while ($login_data=mysqli_fetch_assoc($run_login_query)){
-                $_SESSION['id']=$login_data['id'];
+            $_SESSION['username'] = $uemail;
+            $_SESSION['login'] = true;
+            while ($login_data = mysqli_fetch_assoc($run_login_query)) {
+                $_SESSION['id'] = $login_data['id'];
             }
             header('location:welcome.php');
+        } else {
+            echo '<div class="alert alert-danger alert-dismissible" role="alert" id="liveAlert">Wrong
+  <strong> Username or Password!</strong> Try Again!!<button type = "button" class="btn-close" data-bs-dismiss = "alert" aria-label = "Close" ></button >
+</div > ';
         }
     }
 }
