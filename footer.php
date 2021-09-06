@@ -11,8 +11,8 @@
                 </div>
                 <div class="links-part">
                     <ul class="links">
-                        <li><a href="">About</a></li>
-                        <li><a href="">Pricing</a></li>
+                        <li><a href="#">About</a></li>
+                        <li><a href="pricing.php">Pricing</a></li>
                         <?php
                         if ((isset($_SESSION['username']) and $_SESSION['login'] == true) or (isset($_SESSION['uemail']) and $_SESSION['adminlogin'] == true)) {
                             echo '<li><a href="logout.php">Logout</a></li>';
