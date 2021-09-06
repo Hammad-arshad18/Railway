@@ -14,7 +14,12 @@
                     if(isset($_SESSION['uemail']) and $_SESSION['adminlogin']==true){
                         echo '<a class="nav-link" href="admin.php">Dashboard</a>';
                     }else{
-                        echo '<a class="nav-link" href="admin_login.php">Admin</a>';
+                        if((isset($_SESSION['username']) and $_SESSION['login']==true)){
+                            echo '<a class="nav-link" href="welcome.php">Welcome</a>';
+                        }
+                        else {
+                            echo '<a class="nav-link" href="admin_login.php">Admin</a>';
+                        }
                     }
                     ?>
                 </li>
