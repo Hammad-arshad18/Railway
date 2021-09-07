@@ -1,5 +1,8 @@
 <?php
 session_start();
+if(!isset($_SERVER['uemail']) and $_SESSION['adminlogin']==false){
+    header('location:admin_login.php');
+}
 $conn=mysqli_connect('localhost','root','','railway');
 if($conn){
     if($_SERVER['REQUEST_METHOD']=="POST"){

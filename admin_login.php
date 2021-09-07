@@ -1,5 +1,6 @@
 <?php
 session_start();
+$_SESSION['adminlogin']=false;
 $conn=mysqli_connect('localhost','root','','railway');
 if($conn){
     if($_SERVER['REQUEST_METHOD']=="POST"){
