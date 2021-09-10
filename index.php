@@ -134,7 +134,6 @@ $conn = mysqli_connect('localhost', 'root', '', 'railway');
 
 <!--PHP Contact Us-->
 <?php
-$conn = mysqli_connect('localhost', 'root', '', 'railway');
 if ($conn) {
     if ($_SERVER['REQUEST_METHOD'] == "POST") {
         $email = $_POST['email'];

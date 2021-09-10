@@ -25,7 +25,7 @@
                     </ul>
                 </div>
                 <div class="copyright-part">
-                    <p>© <?php echo date('Y'); ?> Railway || Hammad Arshad</p>
+                    <p>&copy; <?php echo date('Y'); ?> Railways All Rights Reserved</p>
                 </div>
             </div>
         </div>
