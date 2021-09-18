@@ -1,12 +1,11 @@
 <?php
 $conn = mysqli_connect('localhost', 'root', '', 'railway');
+$_SESSION['login'] = false;
 if ($conn) {
     if ($_SERVER['REQUEST_METHOD'] == "POST") {
         $uemail = $_POST['uemail'];
         $upassword = $_POST['upassword'];
         session_start();
-
-
         $login_query = "SELECT * FROM `railway_user` WHERE email = '$uemail' AND password = '$upassword'";
         $run_login_query = mysqli_query($conn, $login_query);
         if (mysqli_num_rows($run_login_query) == 1) {

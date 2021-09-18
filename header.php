@@ -33,6 +33,7 @@
                         <i class="fas fa-user-circle" id="user"></i>
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                        <li><a class="dropdown-item" href="profile.php">Profile</a></li>
                         <li><a class="dropdown-item" href="logout.php">Logout</a></li>
                     </ul>
                 </li>';
